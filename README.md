@@ -51,7 +51,9 @@ If there isn't any settings in for user,
 it will create a new setting value to database
 
 ##Todo List
+
 #####1. create a router and methods for subscribe and unsubscribe stuff. 
+
 #####2. create facade for faster usage. 
 
 ### Testing
