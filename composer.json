@@ -1,0 +1,54 @@
+{
+    "name": "brkfun/notification-options",
+    "description": "Make a sense notification options",
+    "keywords": [
+        "brkfun",
+        "notification-options"
+    ],
+    "homepage": "https://github.com/brkfun/notification-options",
+    "license": "The Unlicense",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Burak Faruk SAHIN",
+            "email": "whoisthis@brkfun.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BRKFun\\NotificationOptions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BRKFun\\NotificationOptions\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BRKFun\\NotificationOptions\\NotificationOptionsServiceProvider"
+            ],
+            "aliases": {
+                "NotificationOptions": "BRKFun\\NotificationOptions\\NotificationOptionsFacade"
+            }
+        }
+    }
+}
