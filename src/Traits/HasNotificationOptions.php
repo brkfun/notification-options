@@ -5,7 +5,7 @@ namespace BRKFun\NotificationOptions\Traits;
 
 use BRKFun\NotificationOptions\Models\NotificationOption;
 
-trait NotificationOptions
+trait HasNotificationOptions
 {
 
     public function initializeNotificationOptions()
