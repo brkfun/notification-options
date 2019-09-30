@@ -4,5 +4,6 @@
  * You can place your custom package configuration in here.
  */
 return [
-    'nullValue' => 1,
+    'defaultValue' => 1,
+    'model'        => BRKFun\NotificationOptions\Models\NotificationOption::class,
 ];

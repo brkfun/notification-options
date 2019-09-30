@@ -4,5 +4,5 @@ namespace BRKFun\NotificationOptions;
 
 class NotificationOptions
 {
-    // Build your next great package.
+    // away from trait we should build some perpendicular functions in here.
 }
