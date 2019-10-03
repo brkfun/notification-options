@@ -14,7 +14,7 @@ trait HasNotificationOptions
         $this->token = tokenSetter();
     }
 
-    public function initializeNotificationOptions()
+    public function initializeHasNotificationOptions()
     {
         $this->setToken();
         $this->with[] = 'notificationOptions';
@@ -74,6 +74,8 @@ trait HasNotificationOptions
         if (substr($name, 0, 5) === 'wants') {
             $setName = lcfirst(substr($name, 5));
             $this->saveNotificationOptions($setName, $value);
+            unset($this->$name);
+            return $this;
         }
 
         return parent::__set($name, $value);
