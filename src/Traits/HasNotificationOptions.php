@@ -7,9 +7,16 @@ use BRKFun\NotificationOptions\Models\NotificationOption;
 
 trait HasNotificationOptions
 {
+    public $token;
+
+    public function setToken()
+    {
+        $this->token = tokenSetter();
+    }
 
     public function initializeNotificationOptions()
     {
+        $this->setToken();
         $this->with[] = 'notificationOptions';
     }
 
@@ -23,6 +30,7 @@ trait HasNotificationOptions
                 ],
                 [
                     'value' => $value,
+                    'token' => $this->token,
                 ]
             );
     }
@@ -35,6 +43,7 @@ trait HasNotificationOptions
                 [
                     'key'   => $key,
                     'value' => config('notification-option.defaultValue', 1),
+                    'token' => $this->token,
                 ]
             );
         $this->load('notificationOptions');

@@ -26,7 +26,10 @@
     "autoload": {
         "psr-4": {
             "BRKFun\\NotificationOptions\\": "src"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

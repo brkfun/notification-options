@@ -18,6 +18,7 @@ class CreateNotificationOptionsTable extends Migration
             $table->morphs('notifiable');
             $table->string('key');
             $table->boolean('value');
+            $table->string('token');
             $table->timestamps();
         });
     }

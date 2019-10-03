@@ -9,7 +9,8 @@ class NotificationOption extends Model
     protected $fillable
         = [
             'key',
-            'value'
+            'value',
+            'token',
         ];
 
     protected $casts = ['value' => 'boolean'];
