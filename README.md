@@ -18,7 +18,7 @@ composer require brkfun/notification-options
 You can also drop the config and needed files :
 
 ```bash
-php artisan vendor:publish Brkfun/NotificationOptions
+php artisan vendor:publish --provider="BRKFun\\NotificationOptions\\NotificationOptionsServiceProvider" 
 ```
 
 
