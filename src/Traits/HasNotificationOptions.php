@@ -51,7 +51,7 @@ trait HasNotificationOptions
 
     public function notificationOptions()
     {
-        return $this->morphMany(config('notification-option.model', NotificationOption::class), 'notifiable');
+        return $this->morphMany(config('notification-option.model', NotificationOption::class), 'notifiable')->orderBy('id');
     }
 
     public function __get($key)
